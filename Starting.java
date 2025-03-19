@@ -37,10 +37,6 @@ public class Starting {
             delay(100);
         }
     }
-    private static void clearLoadingText(){
-        String blank = " ".repeat(50);
-        System.out.println("\r"+blank+"\r");
-    }
 
     private static String ProgressBar(int current, int total){
         return "▃".repeat(current) + " ".repeat(total-current);
