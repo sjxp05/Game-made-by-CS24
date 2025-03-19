@@ -3,19 +3,26 @@ package ui;
 게임 오프닝!
 로딩바(옆에 0%~100% 표시 . 소수점 2번째 자리까지!)
 
++0319 edit : 로고 출력 시 한 줄 씩 출력(시간지연 추가)
  */
 public class Starting {
     public static void main(String[] args) {
+        String[] logo =
+                {"              _         _  _      ",
+                "             | |_  ___ | || | ___ ",
+                "             | . |/ ._>| || |/ . \\",
+                "             |_|_|\\___.|_||_|\\___/"};
         System.out.println("▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃GAME START▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃");
-        System.out.println(
-                "           _         _  _      \n" +
-                        "           | |_  ___ | || | ___ \n" +
-                        "           | . |/ ._>| || |/ . \\\n" +
-                        "           |_|_|\\___.|_||_|\\___/"
-        );
-        System.out.println("로딩 중 ...");
+
+        for (int i=0; i<4; i++){
+            System.out.println(logo[i]);
+
+            delay(500);
+        }
+
+        System.out.println("Loading ...");
         showProgressBar();
-        System.out.println("\n \n게임 시작!");
+        System.out.println("\n로딩 완료!");
     }
 
     private static void showProgressBar(){
@@ -27,11 +34,7 @@ public class Starting {
             String progressBar = ProgressBar(i, total);
             System.out.print("\r"+progressBar+" "+formattedPercent+"%");
 
-            try{
-                Thread.sleep(150);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+            delay(100);
         }
     }
     private static void clearLoadingText(){
@@ -40,7 +43,15 @@ public class Starting {
     }
 
     private static String ProgressBar(int current, int total){
-        return "[" + "▃".repeat(current) + " ".repeat(total-current) + "]";
+        return "▃".repeat(current) + " ".repeat(total-current);
     }
 
+    private static void delay(int ms){
+        try{
+            Thread.sleep(ms);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+    
 }
