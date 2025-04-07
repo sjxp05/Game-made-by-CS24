@@ -1,5 +1,5 @@
 android Room database (SQLite 문법을 따릅니다 ..) - Android Studio ide 사용을 추천합니다
-build.gradle(Module : app) 에 의존성 추가 필수(함께 업로드햇읍니다~ 복사붙여넣기 해보고 안되면 연락해주세요.... )
+<br>build.gradle(Module : app) 에 의존성 추가 필수(함께 업로드햇읍니다~ 복사붙여넣기 해보고 안되면 연락해주세요.... )
 
 ### app/src/main/java/irumaeDB 패키지
 1. entity : Irumae 파일(데이터의 기본 필드, 메서드 저장)
