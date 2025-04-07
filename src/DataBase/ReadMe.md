@@ -7,7 +7,7 @@ android Room database (SQLite 문법을 따릅니다 ..) - Android Studio ide �
    <br>primary key: int id(자동부여)
    <br>String rumaeName, playerName
    <br>Major major // Major.enum 에 가능학과 지정, 지정된 학과만 데이터에 입력 가능
-   <br>int intelligence, int energe, int stress
+   <br>int intelligence, energe, stress
 
 2. DAO : DaoIrumae 파일
    메인에서 데이터베이스를 수정, 관리할 수 있는 메서드(메인에서 직접 데이터베이스에 접근하지 않고 DAO 파일을 거쳐 안정성 확보)
