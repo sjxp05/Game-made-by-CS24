@@ -6,6 +6,9 @@ import androidx.annotation.NonNull;
 import androidx.room.*;
 import androidx.sqlite.db.SupportSQLiteOpenHelper;
 
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
 /*
 DataBase 생성하는 클래스
 <사용개념 : java 디자인패턴 - 싱글톤>
@@ -17,6 +20,9 @@ public abstract class DBIrumae extends RoomDatabase {
     private static DBIrumae instance;
 
     public abstract DaoIrumae daoIrumae();
+
+    private static final int NUMBER_OF_THREADS = 4;
+    public static final ExecutorService databaseWriteExecutor = Executors.newFixedThreadPool(NUMBER_OF_THREADS);
 
     public static synchronized DBIrumae getInstance(Context context) {
         if (instance == null) {
