@@ -1,6 +1,7 @@
 package com.example.growirumae.data.irumaeDB;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.room.*;
 
 /*
@@ -36,19 +37,21 @@ public class Irumae {
         this.id = id;
     }
 
+    @NonNull
     public String getRumaeName() {
         return rumaeName;
     }
 
-    public void setRumaeName(String rumaeName) {
+    public void setRumaeName(@NonNull String rumaeName) {
         this.rumaeName = rumaeName;
     }
 
+    @NonNull
     public String getPlayerName() {
         return playerName;
     }
 
-    public void setPlayerName(String playerName) {
+    public void setPlayerName(@NonNull String playerName) {
         this.playerName = playerName;
     }
 
@@ -82,5 +85,32 @@ public class Irumae {
 
     public void setStress(int stress) {
         this.stress = stress;
+    }
+
+    @Override
+    public boolean equals(@Nullable Object obj) {
+        if (!(obj instanceof Irumae)) {
+            return false;
+        }
+
+        Irumae compare = (Irumae) obj;
+
+        if (this.id != compare.getId()) {
+            return false;
+        } else if (!this.rumaeName.equals(compare.getPlayerName())) {
+            return false;
+        } else if (!this.playerName.equals(compare.getPlayerName())) {
+            return false;
+        } else if (!Converters.fromEnum(this.major).equals(Converters.fromEnum(compare.getMajor()))) {
+            return false;
+        } else if (this.intelligence != compare.getIntelligence()) {
+            return false;
+        } else if (this.energy != compare.getEnergy()) {
+            return false;
+        } else if (this.stress != compare.getStress()) {
+            return false;
+        } else {
+            return true;
+        }
     }
 }

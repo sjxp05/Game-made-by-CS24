@@ -2,20 +2,18 @@ package com.example.growirumae.data;
 
 import android.app.Application;
 
-import androidx.lifecycle.LiveData;
-
 import com.example.growirumae.data.irumaeDB.DBIrumae;
 import com.example.growirumae.data.irumaeDB.DaoIrumae;
 import com.example.growirumae.data.irumaeDB.Irumae;
 
 import java.util.List;
 
-public class Repository {
+public class IrumaeRepository {
     private final DaoIrumae daoIrumae;
     private final List<Irumae> allData;
 
     // db 인스턴스 가져오기, dao 초기화
-    public Repository(Application application) {
+    public IrumaeRepository(Application application) {
         DBIrumae db = DBIrumae.getInstance(application);
         daoIrumae = db.daoIrumae();
         allData = daoIrumae.getAll();

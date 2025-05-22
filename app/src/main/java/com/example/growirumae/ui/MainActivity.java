@@ -1,4 +1,4 @@
-package com.example.growirumae;
+package com.example.growirumae.ui;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -8,8 +8,6 @@ import androidx.room.Room;
 
 import java.util.*;
 import java.util.concurrent.Executors;
-
-import static com.example.growirumae.data.irumaeDB.Major.*;
 
 import com.example.cs24game.R;
 import com.example.growirumae.data.irumaeDB.*;

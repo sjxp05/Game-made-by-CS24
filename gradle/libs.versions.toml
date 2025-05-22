@@ -10,6 +10,7 @@ kotlinxCoroutinesCore = "1.7.3"
 lifecycleRuntimeKtx = "2.9.0"
 activityCompose = "1.10.1"
 composeBom = "2024.09.00"
+recyclerview = "1.4.0"
 roomCoroutines = "2.1.0-alpha04"
 roomRxjava2 = "2.7.1"
 
@@ -19,7 +20,9 @@ androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = 
 androidx-lifecycle-common-java8 = { module = "androidx.lifecycle:lifecycle-common-java8", version.ref = "lifecycleRuntimeKtx" }
 androidx-lifecycle-viewmodel-android = { module = "androidx.lifecycle:lifecycle-viewmodel-android", version.ref = "lifecycleRuntimeKtx" }
 androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycleRuntimeKtx" }
+androidx-recyclerview = { module = "androidx.recyclerview:recyclerview", version.ref = "recyclerview" }
 androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "roomRxjava2" }
+androidx-room-compiler-processing-testing = { module = "androidx.room:room-compiler-processing-testing", version.ref = "roomRxjava2" }
 androidx-room-coroutines = { module = "androidx.room:room-coroutines", version.ref = "roomCoroutines" }
 androidx-room-guava = { module = "androidx.room:room-guava", version.ref = "roomRxjava2" }
 androidx-room-paging-android = { module = "androidx.room:room-paging-android", version.ref = "roomRxjava2" }
