@@ -41,6 +41,11 @@ public class IrumaeViewModel extends AndroidViewModel {
     public void update(Irumae data) {
         repository.update(data);
     }
-    
+
+    //특정 id의 정보 불러오기 요청
+    public LiveData<Irumae> getByID(int id) {
+        return repository.getByID(id);
+    }
+
     // 필요시 메소드 추가 예정
 }
